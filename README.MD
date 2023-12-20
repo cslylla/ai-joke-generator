@@ -26,6 +26,6 @@
 
 ### 3. Links
 
-- Experience the [fun]()
+- Experience the [fun](https://frolicking-otter-4f5fd1.netlify.app)
 - Peek behind the curtain of the [SheCodes AI API](https://www.shecodes.io/learn/apis/ai)
 - Discover more about the magic of [SheCodes](https://www.shecodes.io/)

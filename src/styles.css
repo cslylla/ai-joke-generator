@@ -40,6 +40,7 @@ main {
   width: 50%;
   margin: 0 auto;
 }
+
 button {
   background-color: var(--button-color);
   padding: 1rem;
@@ -59,8 +60,39 @@ button:hover {
   background-color: var(--joke-area-color);
   border-radius: 5px;
   border: 5px solid var(--joke-area-border-color);
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   padding: 1rem;
   min-height: 15rem;
   text-align: left;
+}
+
+small {
+  font-size: small;
+  font-weight: bold;
+}
+
+small a {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+small a:hover {
+  color: var(--button-hover-color);
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 2rem;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  button {
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem 0;
+  }
 }

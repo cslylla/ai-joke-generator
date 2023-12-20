@@ -1,3 +1,4 @@
+import API_KEY from "./apikey.js";
 let jokeArea = document.querySelector("#joke");
 
 function showAnswer(response) {

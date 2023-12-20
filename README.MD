@@ -1,4 +1,4 @@
-# AI Joke Generator
+# ByteLaughs - an AI Joke Generator
 
 ## Project Description
 

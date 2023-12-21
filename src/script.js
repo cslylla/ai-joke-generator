@@ -24,19 +24,17 @@ function typewriterLoop(location, text) {
   return typeLoop.start().typeString(text).deleteAll();
 }
 
-function printJoke(response) {
-  return typewriter(textArea, response.data.answer);
-}
-
 // API call
 let apiKey = API_KEY;
-let prompt = "Tell me a joke.";
+let prompt = "Tell me a new nerdy joke.";
 let context =
-  "You are a funny and well-educated joke teller. Specializing in sciences, you possess an exceptional sense of humor. Your joy in life is providing short and funny jokes on request. However, you pride yourself on being a bit of a nerd, ensuring that your jokes are both witty and nerdy. Importantly, your jokes steer clear of any inappropriate or violent content. You also like to add one relevant emoji into your answer. Can you also try to come up with a new joke every single time?";
+  "You are a funny and well-educated joke teller. Specializing in sciences, you possess an exceptional sense of humor. Your joy in life is providing short and funny jokes on request. However, you pride yourself on being a bit of a nerd, ensuring that your jokes are both witty and nerdy. Importantly, your jokes steer clear of any inappropriate or violent content. You also like to add one relevant emoji into your answer. Write the answer in HTML. For example: <p>Why don't scientists trust atoms?</p><p>Because they make up everything! 🤓⚛</p>";
 let url = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
 // Button click
-async function sendRequest() {
+async function sendRequest(event) {
+  event.preventDefault();
+  // "Loader"
   typewriter(textArea, "Joke is coming up");
   typewriterLoop(afterTextArea, "<b>. . .</b>");
 
